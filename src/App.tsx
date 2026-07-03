@@ -176,22 +176,23 @@ function PublicPage() {
   }
 
   if (submitted) {
-    return (
-      <CenterCard>
-        <StickerTitle eyebrow="sent" title="이미 마음을 보내줬어요 💌" />
-        <p className="soft-text">그래도 수정하고 싶다면 규리에게 직접 말해줘요.</p>
-        <button
-          className="ghost-button"
-          onClick={() => {
-            localStorage.removeItem('submittedBirthdayMessage');
-            setSubmitted(false);
-          }}
-        >
-          테스트용으로 다시 작성하기
-        </button>
-      </CenterCard>
-    );
-  }
+  return (
+    <CenterCard>
+      <StickerTitle eyebrow="sent" title="마음이 도착했어요 💌" />
+      <p className="soft-text">
+        소중한 마음을 남겨줘서 정말 고마워요.
+        <br />
+        남겨준 편지와 쿠폰은 7월 5일이 지나고 하나씩 천천히 열어볼게요.
+        <br />
+        덕분에 제 생일이 벌써 조금 더 다정하고 특별해졌어요 🍊
+      </p>
+      <p className="soft-text small">
+        이제 창을 닫아도 괜찮아요.  
+        혹시 내용을 꼭 수정하고 싶다면 규리에게 직접 말해주세요.
+      </p>
+    </CenterCard>
+  );
+}
 
   return (
     <section className="page-wrap">
